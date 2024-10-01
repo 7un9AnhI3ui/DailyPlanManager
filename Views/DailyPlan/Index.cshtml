@@ -1,0 +1,24 @@
+﻿@model IEnumerable<DailyPlanManager.Models.DailyPlan>
+
+@{
+    ViewData["Title"] = "Daily Plan";
+}
+
+<h1><a asp-action="Create">Create Plan for today</a></h1>
+
+<div>
+    @foreach (var plan in Model)
+    {
+        <p><b>Title:</b></p>
+        <p>@plan.Title</p>
+
+        <p><b>Description:</b></p>
+        <p>@plan.Description</p>
+
+        <p><b>Date:</b></p>
+        <p>@plan.Date</p>
+        <br><br>
+        
+    }
+</div>
+    

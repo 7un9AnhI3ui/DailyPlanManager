@@ -1,0 +1,15 @@
+﻿@model IEnumerable<DailyPlanManager.Models.User>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Select Users</p>
+    @foreach (var user in Model)
+    {
+        <a asp-controller="DailyPlan" asp-action="Index" asp-route-id="@user.Id"><p style="display: inline"> | @user.Username |</p></a>
+    }
+</div>
+
